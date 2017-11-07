@@ -40,8 +40,8 @@ class NotificationsController < ApplicationController
     def send_message(phone_number, alert_message, image_url)
 
       @twilio_number = ENV['TWILIO_NUMBER']
-      @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-      
+      @client = Twilio::REST::Client.new ENV['AC16fa8ca9334a584f344702f4c87b81ed'], ENV['f1860d24bae2b42c1e90c789c113603f']
+
       message = @client.account.messages.create(
         :from => @twilio_number,
         :to => phone_number,
